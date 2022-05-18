@@ -1,0 +1,59 @@
+ТЗ - экран информации о заказах.
+
+Необходимо:
+- выполнить оба запросы getOrders и getUsers параллельно на background-потоках
+- смерджить оба списка в список моделей List<UserOrder>
+- вывести результат в TextView (id == message) (можно просто через toString())
+- во время запросов необходимо отобразить лоадер
+- запросы отправляем по нажатию на кнопку Launch
+
+UserOrder - Моделька, которая будет использоваться для вывода суммарной информации по заказам пользователя.
+Что обязательно должно быть в модельке:
+ - имя пользователя
+ - стоимость заказа
+ - адрес, на который заказ был доставлен
+
+==========================
+ТЗ API:
+
+Orders
+Технические требования:
+ - id (required)
+ - userId (required)
+ - price (required)
+ - orderDateMs (optional)
+
+Пример ответа:
+[
+  {
+    "id": 0,
+    "userId": 12,
+    "price": "100$",
+    "deliveryAddress": "Liberty City",
+    "orderDateMs": 1652283195705
+  },
+  {
+    "id": 1,
+    "userId": 23,
+    "price": "125$",
+    "deliveryAddress": "Los Santos, San Andreas",
+    "orderDateMs": 1652283233283
+  }
+]
+
+Users
+Технические требования:
+ - id (required)
+ - name (required)
+
+Пример ответа:
+[
+  {
+    "id": 12,
+    "name": "Tommy Vercetti"
+  },
+  {
+    "id": 23,
+    "name": "Carl Johnson"
+  }
+]
