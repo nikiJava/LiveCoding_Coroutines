@@ -16,12 +16,12 @@ UserOrder - Моделька, которая будет использовать
 ==========================
 ТЗ API:
 
-Orders
+OrdersRemote
 Технические требования:
  - id (required)
  - userId (required)
  - price (required)
- - orderDateMs (optional)
+ - orderDate (optional)
 
 Пример ответа:
 [
@@ -41,7 +41,7 @@ Orders
   }
 ]
 
-Users
+UsersRemote
 Технические требования:
  - id (required)
  - name (required)
