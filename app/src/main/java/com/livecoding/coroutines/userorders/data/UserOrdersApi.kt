@@ -1,12 +1,6 @@
 package com.livecoding.coroutines.userorders.data
 
-import android.content.res.Resources
-
-interface Api {
-
-    companion object {
-        fun create(resources: Resources): Api = ApiImpl(resources)
-    }
+interface UserOrdersApi {
 
     suspend fun getOrders(): List<OrderRemote>
 
@@ -14,7 +8,7 @@ interface Api {
 }
 
 /**
- * Итоговые распарсенные модели, которые возвращает [Api] (предположим, что Api - это интерфейс
+ * Итоговые распарсенные модели, которые возвращает [UserOrdersApi] (предположим, что Api - это интерфейс
  * для Retrofit 2, а парсинг Json выполняет Gson).
  */
 class OrderRemote(

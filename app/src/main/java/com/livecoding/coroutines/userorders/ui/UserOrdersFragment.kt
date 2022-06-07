@@ -6,8 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.livecoding.coroutines.R
+import com.livecoding.coroutines.userorders.Dependencies
 
 class UserOrdersFragment : Fragment() {
+
+    // пример инициализации UserOrdersApi
+    private val api = Dependencies.userOrdersApi
 
     companion object {
         fun newInstance() = UserOrdersFragment()
