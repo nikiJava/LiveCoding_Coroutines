@@ -15,7 +15,7 @@ class OrderRemote(
     val id: Long,
     val userId: Long,
     val price: Long,
-    val orderDate: Long
+    val address: Long
 )
 
 class UserRemote(
