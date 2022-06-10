@@ -10,7 +10,7 @@ import com.livecoding.coroutines.base.fromJson
 import kotlinx.coroutines.delay
 
 
-class UserOrdersApiImpl(private val resources: Resources) : UserOrdersApi {
+class MockUserOrdersApi(private val resources: Resources) : UserOrdersApi {
 
     private val gson: Gson = GsonBuilder().create()
 

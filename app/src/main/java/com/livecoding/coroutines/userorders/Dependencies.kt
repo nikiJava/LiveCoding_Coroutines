@@ -1,8 +1,8 @@
 package com.livecoding.coroutines.userorders
 
 import android.content.Context
+import com.livecoding.coroutines.userorders.data.MockUserOrdersApi
 import com.livecoding.coroutines.userorders.data.UserOrdersApi
-import com.livecoding.coroutines.userorders.data.UserOrdersApiImpl
 
 object Dependencies {
 
@@ -12,6 +12,6 @@ object Dependencies {
             ?: throw IllegalStateException("Dependency _userOrdersApi was not initialized")
 
     fun initUserOrdersApi(context: Context) {
-        _userOrdersApi = UserOrdersApiImpl(context.resources)
+        _userOrdersApi = MockUserOrdersApi(context.resources)
     }
 }
