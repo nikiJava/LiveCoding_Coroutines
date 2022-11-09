@@ -7,6 +7,6 @@ class LiveCodingApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Dependencies.initUserOrdersApi(this)
+        Dependencies.initProfileApi(this)
     }
 }

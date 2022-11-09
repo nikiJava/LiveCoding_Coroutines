@@ -1,0 +1,10 @@
+{
+  "data": {
+    "birthday": "1990-01-01",
+    "email": "string",
+    "first_name": "",
+    "last_name": "string",
+    "phone": "+79998887766",
+    "advertising_subscription": true
+  }
+}

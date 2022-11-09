@@ -19,7 +19,7 @@ class MockProfileApi(private val resources: Resources) : ProfileApi {
     override suspend fun getProfile(): List<ProfileStub> {
         assertMainThread()
         return simulateRequest(logName = "getProfile", delay = 2000) {
-            gson.fromJson<List<ProfileStub>>(resources, R.raw.orders_response)
+            gson.fromJson<List<ProfileStub>>(resources, R.raw.profile_response)
         }
     }
 

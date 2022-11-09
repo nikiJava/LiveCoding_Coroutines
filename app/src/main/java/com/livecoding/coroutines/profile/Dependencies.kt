@@ -6,12 +6,12 @@ import com.livecoding.coroutines.profile.data.ProfileApi
 
 object Dependencies {
 
-    private var _userProfileApi: ProfileApi? = null
+    private var _profileApi: ProfileApi? = null
     val profileApi
-        get() = _userProfileApi
-            ?: throw IllegalStateException("Dependency _userOrdersApi was not initialized")
+        get() = _profileApi
+            ?: throw IllegalStateException("Dependency _profileApi was not initialized")
 
-    fun initUserOrdersApi(context: Context) {
-        _userProfileApi = MockProfileApi(context.resources)
+    fun initProfileApi(context: Context) {
+        _profileApi = MockProfileApi(context.resources)
     }
 }
