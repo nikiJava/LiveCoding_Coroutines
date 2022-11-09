@@ -1,16 +1,21 @@
-[
-  {
-    "id": 0,
-    "userId": 12,
-    "price": "100$",
-    "deliveryAddress": "Liberty City",
-    "orderDateMs": 1652283195705
-  },
-  {
-    "id": 1,
-    "userId": 23,
-    "price": "125$",
-    "deliveryAddress": "Los Santos, San Andreas",
-    "orderDateMs": 1652283233283
-  }
-]
+{
+  "data": [
+    {
+      "id": 1,
+      "order_number": "1000001",
+      "date_of_creation": "2020-01-01T15:47:21.000000Z",
+      "delivery_price": 1000,
+      "cost": 1000,
+      "discount": 1000,
+      "price": 1000,
+      "quantity": 1,
+      "status": 1,
+      "payment_method": 1,
+      "payment_status": 1,
+      "payment_url": "string",
+      "client_comment": " ",
+      "delivery_method": 2
+    }
+  ],
+  "meta": {}
+}

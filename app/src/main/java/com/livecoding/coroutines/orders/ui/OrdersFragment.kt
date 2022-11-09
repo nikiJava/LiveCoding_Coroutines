@@ -1,4 +1,4 @@
-package com.livecoding.coroutines.userorders.ui
+package com.livecoding.coroutines.orders.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,15 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.livecoding.coroutines.R
-import com.livecoding.coroutines.userorders.Dependencies
+import com.livecoding.coroutines.orders.Dependencies
 
-class UserOrdersFragment : Fragment() {
+class OrdersFragment : Fragment() {
 
-    // пример инициализации UserOrdersApi
-    private val api = Dependencies.userOrdersApi
+    // пример инициализации OrdersApi
+    private val api = Dependencies.ordersApi
 
     companion object {
-        fun newInstance() = UserOrdersFragment()
+        fun newInstance() = OrdersFragment()
     }
 
     override fun onCreateView(
