@@ -9,22 +9,24 @@ import com.livecoding.coroutines.base.currentThread
 import com.livecoding.coroutines.base.fromJson
 import kotlinx.coroutines.delay
 
-
+/**
+ * Предположим, что эта та самая прокси-сущность, которую в рантайме генерирует Retrofit 2.
+ */
 class MockUserOrdersApi(private val resources: Resources) : UserOrdersApi {
 
     private val gson: Gson = GsonBuilder().create()
 
-    override suspend fun getOrders(): List<OrderRemote> {
+    override suspend fun getOrders(): List<OrderStub> {
         assertMainThread()
         return simulateRequest(logName = "getOrders", delay = 2000) {
-            gson.fromJson<List<OrderRemote>>(resources, R.raw.orders_response)
+            gson.fromJson<List<OrderStub>>(resources, R.raw.orders_response)
         }
     }
 
-    override suspend fun getUsers(): List<UserRemote> {
+    override suspend fun getUsers(): List<UserStub> {
         assertMainThread()
         return simulateRequest(logName = "getUser", delay = 3000) {
-            gson.fromJson<List<UserRemote>>(resources, R.raw.users_response)
+            gson.fromJson<List<UserStub>>(resources, R.raw.users_response)
         }
     }
 
