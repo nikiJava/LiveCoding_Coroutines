@@ -2,7 +2,7 @@ package com.livecoding.coroutines
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.livecoding.coroutines.userorders.ui.UserOrdersFragment
+import com.livecoding.coroutines.profile.ui.UserOrdersFragment
 
 class AppActivity : AppCompatActivity() {
 
